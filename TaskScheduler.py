@@ -15,6 +15,7 @@ def generate_customer_data():
     customers = [
         {"email": "ic.to.9h76szl5@gmail.com", "password": "Tomohiro8714"},
         {"email": "yo.ru.db9uwxqi@gmail.com", "password": "ohau5FRdtD43"},
+        {"email": "yu.su.rctmu7wd@gmail.com", "passwprd":"HogeHoge1"}
         # 必要に応じてお客様データを追加してください
     ]
     for customer in customers:
@@ -45,7 +46,7 @@ async def run_monitor():
             for customer in customers_iterator:
                 print(customer)
                 login_and_nikkei_submission(customer["email"],customer["password"],get_csv=True)
-                
+            
             last_executed_date = now.date()
                 
         # 15分毎にチェック（15分＝900秒）
